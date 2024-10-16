@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merry Christmas</title>
+    <link rel="stylesheet" href="css/valentine.css" />
+  </head>
+  <body>
+
+    <div class = "home_container">
+      <img src="assets/img/home.png" alt="" class ="home_img">
+
+      <div class="home_data">
+        <h1 class="home_title">
+          Merry Christmas and Happy New Year!
+        </h1>
+      </div>
+    </div>
+
+    <div id="valentineQuestion"><b>Will you accept my present?</b></div>
+    <button class="answerButton" onclick="location.href='thankyou.html'">
+      Yes (≧ ◡ ≦)
+    </button>
+    <button class="answerButton" id="noButton">I no no wanna o(╥﹏╥)o</button>
+    <br />
+    <img src="cat.gif" alt="cat asking question" class="responsive" />
+
+    <script>
+      document
+        .getElementById("noButton")
+        .addEventListener("click", function () {
+          var yesButton = document.querySelector(
+            'button[onclick*="thankyou.html"]'
+          );
+          var currentFontSize = parseInt(
+            window.getComputedStyle(yesButton).fontSize
+          );
+          yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 5px
+        });
+    </script>
+  </body>
+</html>
